@@ -9,10 +9,10 @@ license=("GPL")
 depends=("pygtk" "gstreamer0.10-python" "gstreamer0.10-base-plugins"
          "gstreamer0.10-good-plugins" "mutagen" "python2-numpy" "fftw")
 makedepends=("git" "cython2")
-optdepends=("gstreamer0.10-bad-plugins: a set of plug-ins that need more "
-            "quality, testing or documentation"
-            "gstreamer0.10-ugly-plugins: a set of good-quality plug-ins that "
-            "might pose distribution problems")
+optdepends=("gstreamer0.10-bad-plugins: a set of plug-ins that need more \
+                                        quality, testing or documentation"
+            "gstreamer0.10-ugly-plugins: a set of good-quality plug-ins that \
+                                         might pose distribution problems")
 provides=("blaplay")
 md5sums=("SKIP")
 _gitroot="git://github.com/nkoep/blaplay.git"
@@ -32,6 +32,5 @@ build() {
 
     msg "Starting setup.py..."
     python2 setup.py install --root="${pkgdir}" --optimize=1
-    make
 }
 
