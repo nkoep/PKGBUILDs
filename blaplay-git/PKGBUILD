@@ -2,7 +2,7 @@
 pkgname=blaplay-git
 pkgver=20130207
 pkgrel=1
-pkgdesc="Minimalistic audio player for GNU/Linux written in Python"
+pkgdesc="Minimalist audio player for GNU/Linux written in Python"
 arch=("i686" "x86_64")
 url="http://nkoep.github.com/blaplay"
 license=("GPL")
