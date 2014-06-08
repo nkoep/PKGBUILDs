@@ -12,7 +12,9 @@ makedepends=("git" "cython2")
 optdepends=("gstreamer0.10-bad-plugins: a set of plug-ins that need more \
                                         quality, testing or documentation"
             "gstreamer0.10-ugly-plugins: a set of good-quality plug-ins that \
-                                         might pose distribution problems")
+                                         might pose distribution problems"
+            "python2-keybinder2: support for global keybindings"
+            "python2-dbus: D-Bus support used to implement MPRIS2")
 provides=("blaplay")
 md5sums=("SKIP")
 _gitroot="git://github.com/nkoep/blaplay.git"
