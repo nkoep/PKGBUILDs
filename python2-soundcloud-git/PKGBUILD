@@ -2,12 +2,14 @@
 
 pkgname=python2-soundcloud-git
 pkgver=r89.ac799b0
-pkgrel=1
+pkgrel=2
 pkgdesc="A Python wrapper around the Soundcloud API"
 arch=("i686" "x86_64")
 url="https://github.com/soundcloud/soundcloud-python"
 license=("BSD")
+depends=("python2-requests")
 makedepends=("git" "python2-setuptools")
+optdepends=("python2-simplejson")
 provides=("python2-soundcloud")
 source=("$pkgname"::"git://github.com/soundcloud/soundcloud-python")
 md5sums=("SKIP")
