@@ -2,7 +2,7 @@ post_install() {
 
 cat << EOF
 
-To start rygel for user `user`, execute
+To start rygel for user 'user', execute
 
     systemctl start rygel@user
 

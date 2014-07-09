@@ -2,7 +2,7 @@
 
 pkgname=rygel-systemd
 pkgver=1
-pkgrel=1
+pkgrel=2
 pkgdesc="A systemd service file for the Rygel DLNA server"
 arch=("any")
 url="https://github.com/nkoep/PKGBUILDs/tree/master/rygel-systemd"
