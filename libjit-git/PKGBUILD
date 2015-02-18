@@ -1,7 +1,7 @@
 # Maintainer: Niklas Koep <niklas dot koep at gmail dot com>
 pkgname=libjit-git
-pkgver=20131029
-pkgrel=3
+pkgver=r585.a8293e1
+pkgrel=1
 pkgdesc="Library for generic Just-in-Time compiler functionality"
 arch=("i686" "x86_64")
 url="https://www.gnu.org/software/libjit/"
@@ -10,22 +10,17 @@ makedepends=("git")
 provides=("libjit")
 conflicts=("libjit")
 options=("!libtool")
+source=("$pkgname"::"git://git.savannah.gnu.org/libjit.git")
 md5sums=("SKIP")
-_gitroot="git://git.savannah.gnu.org/libjit.git"
+
+pkgver() {
+    cd "$srcdir/$pkgname"
+    printf "r%s.%s" "$(git rev-list --count HEAD)" \
+        "$(git rev-parse --short HEAD)"
+}
 
 build() {
-    cd "${srcdir}"
-    msg "Connecting to GIT server...."
-
-    if [ ! -d ${pkgname} ]; then
-        git clone ${_gitroot} ${pkgname} --depth=1 || return 1
-    fi
-
     cd ${pkgname}
-    git pull origin || return 1
-
-    msg "GIT checkout done"
-
     msg "Starting make..."
     ./auto_gen.sh
     ./configure --prefix=/usr
